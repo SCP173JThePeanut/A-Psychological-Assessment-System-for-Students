@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "prediction": "中度压力",
+  "prediction_code": 2,
+  "score": 55.6,
+  "confidence": 0.3538,
+  "confidence_percent": 35.4,
+  "contributions": {
+    "audio": 32.9,
+    "face": 37.1,
+    "hr": 30.0
+  },
+  "explanation": "当前心理状态为【中度压力】，压力分数 55.6 分。 主要受面部表情影响（贡献度 37.1%）。 置信度 35.4%。中度压力，建议进行深呼吸或短暂休息。",
+  "timestamp": "2026-03-31T15:23:55.611625",
+  "data_timestamp": "",
+  "data_timestamp_raw": null,
+  "model_used": "final_mental_health_model.pth",
+  "feature_summary": {
+    "face_min": 0.5,
+    "face_max": 0.5,
+    "audio_min": 0.5,
+    "audio_max": 0.5,
+    "hr_min": 0.5,
+    "hr_max": 0.5
+  }
+}

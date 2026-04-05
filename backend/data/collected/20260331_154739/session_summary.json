@@ -1,0 +1,50 @@
+{
+  "session_id": "20260331_154739",
+  "participant_id": "participant_001",
+  "experiment_type": "baseline",
+  "start_time": "2026-03-31T15:47:39.054604",
+  "end_time": "2026-03-31T15:48:42.552094",
+  "duration_seconds": 63.5,
+  "stats": {
+    "frames_processed": 401,
+    "audio_chunks": 208,
+    "packets_created": 8,
+    "packets_saved": 7,
+    "mental_analyses": 13,
+    "errors": 0,
+    "warnings": 0,
+    "start_time": 1774943259.0546038
+  },
+  "performance": {
+    "uptime": 33.46057367324829,
+    "fps": 18.464830455139154,
+    "avg_frame_time": 0.0541569995880127,
+    "avg_processing_time": 0.38247612439669093,
+    "cpu_usage": 0.0,
+    "memory_usage": 80.3,
+    "avg_queue_size": 21.51,
+    "errors": 0,
+    "warnings": 7
+  },
+  "hr_statistics": {
+    "rr_count": 10,
+    "mean_rr": 738.9830969103283,
+    "std_rr": 12.392438952363454,
+    "mean_hr": 81.19265548949448
+  },
+  "hrv_summary": {
+    "features": [
+      0.3762,
+      0.9958,
+      1.0,
+      0.8313,
+      0.7408,
+      0.8416,
+      0.6071,
+      0.101,
+      1
+    ]
+  },
+  "hr_source": "simulated",
+  "backend_enabled": true
+}

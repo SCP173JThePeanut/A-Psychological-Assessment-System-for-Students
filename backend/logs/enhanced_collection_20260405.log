@@ -1,0 +1,341 @@
+2026-04-05 17:12:48 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:12:48 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:12:48 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=simulated
+2026-04-05 17:12:48 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:13:28 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:13:28 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:13:28 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=simulated
+2026-04-05 17:13:28 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:13:37 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:13:37 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:13:37 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=simulated
+2026-04-05 17:13:37 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:22:12 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:22:12 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:22:12 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=simulated
+2026-04-05 17:22:12 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:24:51 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:24:51 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:24:51 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=simulated
+2026-04-05 17:24:51 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:25:44 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:25:44 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:25:44 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=simulated
+2026-04-05 17:25:44 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:26:21 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:26:21 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:26:21 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=simulated
+2026-04-05 17:26:21 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:26:49 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:26:49 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:26:49 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=simulated
+2026-04-05 17:26:49 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:30:06 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:30:06 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:30:06 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=simulated
+2026-04-05 17:30:06 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:30:06 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 17:30:06 - EnhancedDataCollector - INFO - [Thread-2] - 🔍 正在扫描BLE心率设备...
+2026-04-05 17:30:16 - EnhancedDataCollector - INFO - [Thread-2] - 找到 30 个蓝牙设备
+2026-04-05 17:30:16 - EnhancedDataCollector - INFO - [Thread-2] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 17:30:16 - EnhancedDataCollector - INFO - [Thread-2] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 17:30:20 - EnhancedDataCollector - INFO - [Thread-2] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 17:30:20 - EnhancedDataCollector - INFO - [Thread-2] - ✅ 找到心率测量特征！
+2026-04-05 17:30:20 - EnhancedDataCollector - INFO - [Thread-2] - ✅ 开始接收心率数据
+2026-04-05 17:30:21 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 17:33:46 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:33:46 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:33:46 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=simulated
+2026-04-05 17:33:46 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:33:46 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 17:33:46 - EnhancedDataCollector - INFO - [Thread-2] - 🔍 正在扫描BLE心率设备...
+2026-04-05 17:33:56 - EnhancedDataCollector - INFO - [Thread-2] - 找到 30 个蓝牙设备
+2026-04-05 17:33:56 - EnhancedDataCollector - INFO - [Thread-2] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 17:33:56 - EnhancedDataCollector - INFO - [Thread-2] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 17:34:00 - EnhancedDataCollector - INFO - [Thread-2] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 17:34:00 - EnhancedDataCollector - INFO - [Thread-2] - ✅ 找到心率测量特征！
+2026-04-05 17:34:00 - EnhancedDataCollector - INFO - [Thread-2] - ✅ 开始接收心率数据
+2026-04-05 17:34:00 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 17:36:00 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:36:00 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:36:00 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 17:36:00 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 17:36:10 - EnhancedDataCollector - INFO - [Thread-1] - 找到 25 个蓝牙设备
+2026-04-05 17:36:10 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 17:36:10 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 17:36:14 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 17:36:14 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 17:36:14 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 17:36:14 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 17:37:20 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:37:20 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:37:20 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 17:37:20 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 17:37:30 - EnhancedDataCollector - INFO - [Thread-1] - 找到 22 个蓝牙设备
+2026-04-05 17:37:30 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 17:37:30 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 17:37:34 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 17:37:34 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 17:37:34 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 17:37:34 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 17:37:34 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 17:37:34 - EnhancedDataCollector - INFO - [Thread-2] - 🔍 正在扫描BLE心率设备...
+2026-04-05 17:37:44 - EnhancedDataCollector - INFO - [Thread-2] - 找到 23 个蓝牙设备
+2026-04-05 17:37:44 - EnhancedDataCollector - WARNING - [Thread-2] - ⚠️ 未找到BLE心率设备，请确保手表已开启心率广播
+2026-04-05 17:38:04 - EnhancedDataCollector - WARNING - [MainThread] - ⚠️ BLE连接超时，切换到模拟数据模式
+2026-04-05 17:38:04 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:38:41 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:38:41 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:38:41 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 17:38:41 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 17:38:51 - EnhancedDataCollector - INFO - [Thread-1] - 找到 23 个蓝牙设备
+2026-04-05 17:38:51 - EnhancedDataCollector - WARNING - [Thread-1] - ⚠️ 未找到BLE心率设备，请确保手表已开启心率广播
+2026-04-05 17:39:11 - EnhancedDataCollector - WARNING - [MainThread] - ⚠️ BLE连接超时，切换到模拟数据模式
+2026-04-05 17:39:11 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:39:11 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 17:39:11 - EnhancedDataCollector - INFO - [Thread-3] - 🔍 正在扫描BLE心率设备...
+2026-04-05 17:39:35 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:39:35 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:39:35 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 17:39:35 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 17:39:45 - EnhancedDataCollector - INFO - [Thread-1] - 找到 22 个蓝牙设备
+2026-04-05 17:39:45 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 17:39:45 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 17:39:48 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 17:39:48 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 17:39:48 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 17:39:49 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 17:39:49 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 17:39:49 - EnhancedDataCollector - INFO - [Thread-2] - 🔍 正在扫描BLE心率设备...
+2026-04-05 17:39:59 - EnhancedDataCollector - INFO - [Thread-2] - 找到 33 个蓝牙设备
+2026-04-05 17:39:59 - EnhancedDataCollector - WARNING - [Thread-2] - ⚠️ 未找到BLE心率设备，请确保手表已开启心率广播
+2026-04-05 17:40:19 - EnhancedDataCollector - WARNING - [MainThread] - ⚠️ BLE连接超时，切换到模拟数据模式
+2026-04-05 17:40:19 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 17:44:57 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:44:57 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:44:57 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 17:44:57 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 17:45:07 - EnhancedDataCollector - INFO - [Thread-1] - 找到 29 个蓝牙设备
+2026-04-05 17:45:07 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 17:45:07 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 17:45:12 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 17:45:12 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 17:45:12 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 17:45:12 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 17:47:20 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 17:47:20 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 17:47:20 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 17:47:20 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 17:47:30 - EnhancedDataCollector - INFO - [Thread-1] - 找到 26 个蓝牙设备
+2026-04-05 17:47:30 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 17:47:30 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 17:47:34 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 17:47:34 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 17:47:34 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 17:47:35 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 18:06:52 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 18:06:52 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 18:06:52 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 18:06:52 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 18:07:02 - EnhancedDataCollector - INFO - [Thread-1] - 找到 22 个蓝牙设备
+2026-04-05 18:07:02 - EnhancedDataCollector - WARNING - [Thread-1] - ⚠️ 未找到BLE心率设备，请确保手表已开启心率广播
+2026-04-05 18:07:19 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 18:07:19 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 18:07:19 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 18:07:19 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 18:07:29 - EnhancedDataCollector - INFO - [Thread-1] - 找到 29 个蓝牙设备
+2026-04-05 18:07:29 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 18:07:29 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 18:07:33 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 18:07:33 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 18:07:33 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 18:07:33 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 18:11:46 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 18:11:46 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 18:11:46 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 18:11:46 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 18:11:56 - EnhancedDataCollector - INFO - [Thread-1] - 找到 28 个蓝牙设备
+2026-04-05 18:11:56 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 18:11:56 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 18:12:00 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 18:12:00 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 18:12:00 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 18:12:00 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 18:14:12 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 18:14:12 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 18:14:12 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 18:14:12 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 18:14:22 - EnhancedDataCollector - INFO - [Thread-1] - 找到 25 个蓝牙设备
+2026-04-05 18:14:22 - EnhancedDataCollector - WARNING - [Thread-1] - ⚠️ 未找到BLE心率设备，请确保手表已开启心率广播
+2026-04-05 18:14:28 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 18:14:28 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 18:14:28 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 18:14:28 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 18:14:38 - EnhancedDataCollector - INFO - [Thread-1] - 找到 29 个蓝牙设备
+2026-04-05 18:14:38 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 18:14:38 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 18:14:43 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 18:14:43 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 18:14:43 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 18:14:43 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 18:15:46 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 18:15:46 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 18:15:46 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 18:15:46 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 18:15:56 - EnhancedDataCollector - INFO - [Thread-1] - 找到 34 个蓝牙设备
+2026-04-05 18:15:56 - EnhancedDataCollector - WARNING - [Thread-1] - ⚠️ 未找到BLE心率设备，请确保手表已开启心率广播
+2026-04-05 18:16:01 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 18:16:01 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 18:16:01 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 18:16:01 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 18:16:11 - EnhancedDataCollector - INFO - [Thread-1] - 找到 30 个蓝牙设备
+2026-04-05 18:16:11 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 18:16:11 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 18:16:16 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 18:16:16 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 18:16:16 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 18:16:16 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 18:47:33 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 18:47:33 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 18:47:33 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 18:47:33 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 18:47:43 - EnhancedDataCollector - INFO - [Thread-1] - 找到 20 个蓝牙设备
+2026-04-05 18:47:43 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 18:47:43 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 18:47:47 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 18:47:47 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 18:47:47 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 18:47:47 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 19:05:50 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 19:05:50 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 19:05:50 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 19:05:50 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 19:06:00 - EnhancedDataCollector - INFO - [Thread-1] - 找到 24 个蓝牙设备
+2026-04-05 19:06:00 - EnhancedDataCollector - WARNING - [Thread-1] - ⚠️ 未找到BLE心率设备，请确保手表已开启心率广播
+2026-04-05 19:06:20 - EnhancedDataCollector - WARNING - [MainThread] - ⚠️ BLE连接超时，切换到模拟数据模式
+2026-04-05 19:06:20 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 19:06:36 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 19:06:36 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 19:06:36 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 19:06:36 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 19:06:46 - EnhancedDataCollector - INFO - [Thread-1] - 找到 22 个蓝牙设备
+2026-04-05 19:06:46 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 19:06:46 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 19:06:50 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 19:06:50 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 19:06:50 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 19:06:50 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 19:07:32 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 19:07:33 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 19:07:33 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 19:07:33 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 19:07:43 - EnhancedDataCollector - INFO - [Thread-1] - 找到 24 个蓝牙设备
+2026-04-05 19:07:43 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 19:07:43 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 19:07:46 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 19:07:46 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 19:07:46 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 19:07:47 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 19:11:21 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 19:11:21 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 19:11:21 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 19:11:21 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 19:11:31 - EnhancedDataCollector - INFO - [Thread-1] - 找到 30 个蓝牙设备
+2026-04-05 19:11:31 - EnhancedDataCollector - WARNING - [Thread-1] - ⚠️ 未找到BLE心率设备，请确保手表已开启心率广播
+2026-04-05 19:11:47 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 19:11:47 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 19:11:47 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 19:11:48 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 19:11:58 - EnhancedDataCollector - INFO - [Thread-1] - 找到 32 个蓝牙设备
+2026-04-05 19:11:58 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 19:11:58 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 19:12:01 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 19:12:01 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 19:12:01 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 19:12:02 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 19:18:17 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 19:18:17 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 19:18:17 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 19:18:17 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 19:18:27 - EnhancedDataCollector - INFO - [Thread-1] - 找到 22 个蓝牙设备
+2026-04-05 19:18:27 - EnhancedDataCollector - WARNING - [Thread-1] - ⚠️ 未找到BLE心率设备，请确保手表已开启心率广播
+2026-04-05 19:18:32 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 19:18:32 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 19:18:32 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 19:18:32 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 19:18:42 - EnhancedDataCollector - INFO - [Thread-1] - 找到 27 个蓝牙设备
+2026-04-05 19:18:42 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 19:18:42 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 19:18:46 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 19:18:46 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 19:18:46 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 19:18:46 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 19:27:33 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 19:27:33 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 19:27:33 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 19:27:33 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 19:27:43 - EnhancedDataCollector - INFO - [Thread-1] - 找到 22 个蓝牙设备
+2026-04-05 19:27:43 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 19:27:43 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 19:27:48 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 19:27:48 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 19:27:48 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 19:27:48 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 20:26:30 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 20:26:31 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 20:26:31 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 20:26:31 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 20:26:41 - EnhancedDataCollector - INFO - [Thread-1] - 找到 23 个蓝牙设备
+2026-04-05 20:26:41 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 20:26:41 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 20:26:46 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 20:26:46 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 20:26:46 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 20:26:46 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 20:48:05 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 20:48:05 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 20:48:05 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 20:48:05 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 20:48:15 - EnhancedDataCollector - INFO - [Thread-1] - 找到 28 个蓝牙设备
+2026-04-05 20:48:15 - EnhancedDataCollector - WARNING - [Thread-1] - ⚠️ 未找到BLE心率设备，请确保手表已开启心率广播
+2026-04-05 20:48:35 - EnhancedDataCollector - WARNING - [MainThread] - ⚠️ BLE连接超时，切换到模拟数据模式
+2026-04-05 20:48:35 - EnhancedDataCollector - INFO - [MainThread] - 📊 使用模拟心率数据
+2026-04-05 20:51:17 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 20:51:17 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 20:51:17 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 20:51:17 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 20:51:27 - EnhancedDataCollector - INFO - [Thread-1] - 找到 26 个蓝牙设备
+2026-04-05 20:51:27 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 20:51:27 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 20:51:31 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 20:51:31 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 20:51:31 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 20:51:31 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 20:55:58 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 20:55:58 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 20:55:58 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 20:55:58 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 20:56:08 - EnhancedDataCollector - INFO - [Thread-1] - 找到 32 个蓝牙设备
+2026-04-05 20:56:08 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 20:56:08 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 20:56:12 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 20:56:12 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 20:56:12 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 20:56:12 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功
+2026-04-05 21:04:21 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 21:04:21 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 21:04:21 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 21:04:21 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 21:04:31 - EnhancedDataCollector - INFO - [Thread-1] - 找到 23 个蓝牙设备
+2026-04-05 21:04:31 - EnhancedDataCollector - WARNING - [Thread-1] - ⚠️ 未找到BLE心率设备，请确保手表已开启心率广播
+2026-04-05 21:04:38 - EnhancedDataCollector - INFO - [MainThread] - ✅ MediaPipe 新版 API 初始化成功
+2026-04-05 21:04:38 - EnhancedDataCollector - INFO - [MainThread] - ✅ 新版 MediaPipe 面部特征提取器初始化成功
+2026-04-05 21:04:38 - EnhancedDataCollector - INFO - [MainThread] - 心率采集器初始化: 设备类型=ble_heart_rate
+2026-04-05 21:04:38 - EnhancedDataCollector - INFO - [Thread-1] - 🔍 正在扫描BLE心率设备...
+2026-04-05 21:04:48 - EnhancedDataCollector - INFO - [Thread-1] - 找到 32 个蓝牙设备
+2026-04-05 21:04:48 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率设备：HUAWEI WATCH HR-A51
+2026-04-05 21:04:48 - EnhancedDataCollector - INFO - [Thread-1] - 正在连接 HUAWEI WATCH HR-A51...
+2026-04-05 21:04:55 - EnhancedDataCollector - INFO - [Thread-1] - ✅ BLE连接成功，正在查找心率服务...
+2026-04-05 21:04:55 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 找到心率测量特征！
+2026-04-05 21:04:55 - EnhancedDataCollector - INFO - [Thread-1] - ✅ 开始接收心率数据
+2026-04-05 21:04:55 - EnhancedDataCollector - INFO - [MainThread] - ✅ BLE心率设备连接成功

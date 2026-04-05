@@ -1,0 +1,389 @@
+:root {
+  /* 青绿色系 - 主色调 */
+  --color-primary: #4ECDC4;
+  --color-primary-light: #88E8DF;
+  --color-primary-dark: #2A6F79;
+  --color-primary-transparent: rgba(78, 205, 196, 0.1);
+  
+  /* 辅助色系 */
+  --color-secondary: #FF6B6B;
+  --color-warning: #FFA726;
+  --color-success: #7ED321;
+  --color-info: #64B5F6;
+  
+  /* 文字色 */
+  --color-text-primary: #2C3E50;
+  --color-text-secondary: #546E7A;
+  --color-text-light: #78909C;
+  --color-text-white: #FFFFFF;
+  --color-text-on-primary: #FFFFFF;
+  
+  /* 背景色 */
+  --color-bg-main: #F8FAFC;
+  --color-bg-card: #FFFFFF;
+  --color-bg-hover: #F1F8E9;
+  --color-bg-disabled: #F5F5F5;
+  --color-bg-overlay: rgba(0, 0, 0, 0.5);
+  
+  /* 边框色 */
+  --color-border: #E8F4F3;
+  --color-border-light: #F1F8E9;
+  --color-border-dark: #B0BEC5;
+  --color-border-primary: #4ECDC4;
+  
+  /* 阴影 */
+  --shadow-sm: 0 2px 8px rgba(42, 111, 121, 0.08);
+  --shadow-md: 0 4px 12px rgba(42, 111, 121, 0.12);
+  --shadow-lg: 0 8px 24px rgba(42, 111, 121, 0.16);
+  --shadow-xl: 0 12px 48px rgba(42, 111, 121, 0.2);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  
+  /* 圆角 */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-full: 9999px;
+  
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 80px;
+  
+  /* 字体 */
+  --font-family-title: 'Ma Shan Zheng', cursive;
+  --font-family-main: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-mono: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  
+  /* 字体大小 */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 48px;
+  --font-size-4xl: 64px;
+  
+  /* 字体粗细 */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* 过渡动画 */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* 层级 */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+  --z-index-toast: 1080;
+  
+  /* === 布局变量 - 新增 === */
+  --container-max-width: 100%;
+  --container-max-width-sm: 640px;
+  --container-max-width-md: 768px;
+  --container-max-width-lg: 1024px;
+  --container-max-width-xl: 1280px;
+  --container-max-width-2xl: 1536px;
+  
+  /* 响应式断点 */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* 布局间距 */
+  --layout-padding: 16px;
+  --layout-padding-sm: 8px;
+  --layout-padding-md: 20px;
+  --layout-padding-lg: 32px;
+  --layout-padding-xl: 48px;
+  
+  /* 网格系统 */
+  --grid-columns: 12;
+  --grid-gap: var(--spacing-lg);
+  --grid-gap-sm: var(--spacing-md);
+  --grid-gap-lg: var(--spacing-xl);
+  
+  /* 卡片尺寸 */
+  --card-min-width: 280px;
+  --card-max-width: 400px;
+  --card-padding: var(--spacing-lg);
+  
+  /* 侧边栏 */
+  --sidebar-width: 280px;
+  --sidebar-collapsed-width: 80px;
+  
+  /* 头部高度 */
+  --header-height: 64px;
+  --header-height-sm: 56px;
+  
+  /* 底部高度 */
+  --footer-height: 80px;
+  
+  /* 滚动条 */
+  --scrollbar-width: 8px;
+  --scrollbar-thumb-color: var(--color-primary-light);
+  --scrollbar-track-color: var(--color-border-light);
+  
+  /* 动画关键帧 */
+  --animation-duration-slow: 0.8s;
+  --animation-duration-normal: 0.5s;
+  --animation-duration-fast: 0.3s;
+  
+  /* 渐变背景 */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, #FF8E53 100%);
+  --gradient-bg: linear-gradient(135deg, var(--color-bg-main) 0%, #E8F4F3 100%);
+  --gradient-card: linear-gradient(135deg, var(--color-bg-card) 0%, #F9FCFB 100%);
+  
+  /* 模糊效果 */
+  --blur-sm: blur(4px);
+  --blur-md: blur(8px);
+  --blur-lg: blur(16px);
+  --blur-xl: blur(24px);
+}
+
+/* 深色模式变量 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #E0E0E0;
+    --color-text-secondary: #B0B0B0;
+    --color-text-light: #8A8A8A;
+    --color-bg-main: #121212;
+    --color-bg-card: #1E1E1E;
+    --color-bg-hover: #2D2D2D;
+    --color-bg-disabled: #2A2A2A;
+    --color-border: #2D2D2D;
+    --color-border-light: #3D3D3D;
+    --color-border-dark: #1A1A1A;
+    
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.6);
+    
+    --scrollbar-thumb-color: var(--color-primary-dark);
+    --scrollbar-track-color: var(--color-bg-card);
+    
+    --gradient-bg: linear-gradient(135deg, #121212 0%, #1A2A2A 100%);
+    --gradient-card: linear-gradient(135deg, #1E1E1E 0%, #252525 100%);
+  }
+
+  /* ====================
+   新增：水墨风格变量
+   ==================== */
+
+/* 青绿水墨主色调 */
+:root {
+  /* 水墨主色调 */
+  --color-ink-black: #1a1a1a;
+  --color-paper-white: #f9f7f1;
+  --color-bamboo-green: #2d5a27;
+  --color-water-blue: #6dd5ed;
+  --color-lotus-pink: #f8b8d0;
+  --color-mist-gray: #a8c3bc;
+  --color-ink-gray: #8c8c8c;
+  --color-shadow-ink: rgba(45, 90, 39, 0.1);
+  
+  /* 水墨渐变 */
+  --gradient-ink: linear-gradient(135deg, 
+    rgba(109, 213, 237, 0.1) 0%, 
+    rgba(248, 184, 208, 0.05) 50%, 
+    rgba(168, 195, 188, 0.1) 100%);
+  
+  --gradient-bamboo: linear-gradient(45deg, 
+    var(--color-bamboo-green) 0%, 
+    #3a7c3a 50%, 
+    #4c9c4c 100%);
+  
+  --gradient-heart: linear-gradient(135deg, 
+    var(--color-lotus-pink) 0%, 
+    #ff9bc8 50%, 
+    #ff7eb3 100%);
+  
+  /* 水墨阴影 */
+  --shadow-ink-soft: 0 8px 32px rgba(45, 90, 39, 0.08);
+  --shadow-ink-medium: 0 4px 20px rgba(45, 90, 39, 0.12);
+  --shadow-ink-strong: 0 8px 24px rgba(45, 90, 39, 0.16);
+  --shadow-ink-inner: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  
+  /* 水墨边框 */
+  --border-ink-thin: 1px solid rgba(45, 90, 39, 0.1);
+  --border-ink-medium: 2px solid rgba(45, 90, 39, 0.2);
+  --border-ink-thick: 3px solid rgba(45, 90, 39, 0.3);
+  
+  /* 书法字体 */
+  --font-calligraphy: 'Ma Shan Zheng', cursive, 'KaiTi', 'STKaiti', serif;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* 水墨圆角 */
+  --radius-ink-small: 8px;
+  --radius-ink-medium: 12px;
+  --radius-ink-large: 20px;
+  --radius-ink-xl: 30px;
+  --radius-ink-circle: 50%;
+  
+  /* 水墨动画 */
+  --animation-ink-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-ink-medium: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-ink-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-ink-breathe: 4s ease-in-out infinite;
+  --animation-ink-heartbeat: 1.5s ease-in-out infinite;
+  
+  /* 水墨模糊 */
+  --blur-ink-light: blur(4px);
+  --blur-ink-medium: blur(8px);
+  --blur-ink-heavy: blur(16px);
+  
+  /* 布局间距（水墨风格） */
+  --spacing-ink-xs: 8px;
+  --spacing-ink-sm: 12px;
+  --spacing-ink-md: 20px;
+  --spacing-ink-lg: 32px;
+  --spacing-ink-xl: 48px;
+  --spacing-ink-xxl: 64px;
+  
+  /* 容器宽度（水墨布局） */
+  --container-ink-max: 100%;
+  --container-ink-lg: 1200px;
+  --container-ink-md: 900px;
+  --container-ink-sm: 600px;
+  
+  /* 层级（水墨效果） */
+  --z-index-ink-background: 1;
+  --z-index-ink-leaves: 2;
+  --z-index-ink-content: 10;
+  --z-index-ink-overlay: 100;
+  --z-index-ink-modal: 1000;
+}
+
+/* 水墨动画关键帧 */
+@keyframes ink-diffuse {
+  0% { 
+    opacity: 0.1; 
+    transform: scale(0.9) rotate(0deg);
+  }
+  50% { 
+    opacity: 0.3; 
+    transform: scale(1.2) rotate(180deg);
+  }
+  100% { 
+    opacity: 0.1; 
+    transform: scale(0.9) rotate(360deg);
+  }
+}
+
+@keyframes leaf-fall {
+  0% { 
+    transform: translateY(-100px) rotate(0deg); 
+    opacity: 0; 
+  }
+  10% { 
+    opacity: 0.6; 
+  }
+  90% { 
+    opacity: 0.6; 
+  }
+  100% { 
+    transform: translateY(100vh) rotate(360deg); 
+    opacity: 0; 
+  }
+}
+
+@keyframes breath {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 0.8; 
+  }
+  50% { 
+    transform: scale(1.2); 
+    opacity: 1; 
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.1); 
+  }
+}
+
+@keyframes ink-ripple {
+  0% { 
+    transform: scale(1); 
+    opacity: 0.8; 
+  }
+  100% { 
+    transform: scale(1.5); 
+    opacity: 0; 
+  }
+}
+
+@keyframes ink-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(78, 205, 196, 0.4); 
+  }
+  50% { 
+    box-shadow: 0 0 0 20px rgba(78, 205, 196, 0); 
+  }
+}
+
+@keyframes ink-glow {
+  0%, 100% { 
+    filter: brightness(1); 
+  }
+  50% { 
+    filter: brightness(1.2); 
+  }
+}
+
+@keyframes wave-float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
+}
+
+/* 深色模式下的水墨风格 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-ink-black: #e0e0e0;
+    --color-paper-white: #1a1a1a;
+    --color-bamboo-green: #4c9c4c;
+    --color-water-blue: #8ed8f8;
+    --color-lotus-pink: #ffb6d9;
+    --color-mist-gray: #7a8d87;
+    --color-shadow-ink: rgba(76, 156, 76, 0.2);
+    
+    --gradient-ink: linear-gradient(135deg, 
+      rgba(142, 216, 248, 0.1) 0%, 
+      rgba(255, 182, 217, 0.05) 50%, 
+      rgba(122, 141, 135, 0.1) 100%);
+  }
+}
+}

@@ -1,0 +1,26 @@
+<!-- 在原有的字体链接基础上，添加中文字体 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>心镜 · 守望 - 学生心理健康评估系统</title>
+  <!-- 引入书法字体（马善政，提升标题样式） -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- 引入阿里巴巴普惠体（备用） -->
+  <link href="https://fonts.googleapis.com/css2?family=Alimama+ShuHeiTi&display=swap" rel="stylesheet">
+  <!-- 引入思源宋体（备用） -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* 字体回退策略 */
+    body {
+      font-family: 'Ma Shan Zheng', 'Noto Serif SC', 'Alimama ShuHeiTi', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "participant_id": "participant_001",
+  "experiment_type": "baseline",
+  "output_dir": "data/collected",
+  "show_preview": true,
+  "use_database": true,
+  "enable_visualization": true,
+  "enable_hr": true,
+  "hr_device_type": "ble_heart_rate",
+  "ble_keyword": "HUAWEI",
+  "ble_timeout": 30,
+  "fallback_simulated": true,
+  "backend_url": "http://localhost:5000/predict",
+  "enable_backend": true
+}

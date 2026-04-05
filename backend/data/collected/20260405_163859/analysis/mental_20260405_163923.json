@@ -1,0 +1,13 @@
+{
+  "timestamp": 1775378363.5692945,
+  "stress_level": 0.2067196812236168,
+  "anxiety_level": 0.014642023694864538,
+  "fatigue_level": 0.38645634374039983,
+  "attention_score": 0.9614066131849947,
+  "mood_score": 0.5233143933607369,
+  "recommendations": [
+    "\u72b6\u6001\u826f\u597d"
+  ],
+  "risk_level": "low",
+  "hr_available": false
+}

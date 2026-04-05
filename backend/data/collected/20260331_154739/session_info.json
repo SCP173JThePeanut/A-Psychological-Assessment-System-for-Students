@@ -1,0 +1,55 @@
+{
+  "session_id": "20260331_154739",
+  "participant_id": "participant_001",
+  "experiment_type": "baseline",
+  "start_time": "2026-03-31T15:47:39.054604",
+  "config": {
+    "participant_id": "participant_001",
+    "experiment_type": "baseline",
+    "output_dir": "data/collected",
+    "video_width": 640,
+    "video_height": 480,
+    "video_fps": 30,
+    "camera_index": 1,
+    "show_preview": true,
+    "audio_sample_rate": 16000,
+    "audio_channels": 1,
+    "audio_chunk_duration": 2.0,
+    "hrv_buffer_size": 2000,
+    "hrv_calc_interval": 5.0,
+    "feature_extraction_interval": 1.0,
+    "mental_analysis_interval": 2.0,
+    "save_interval": 10,
+    "save_raw": false,
+    "use_database": true,
+    "db_path": "data/feature_database.db",
+    "enable_visualization": true,
+    "enable_hr": true,
+    "hr_device_type": "ble_heart_rate",
+    "hr_device_id": null,
+    "ble_keyword": "HUAWEI",
+    "ble_timeout": 30,
+    "fallback_simulated": true,
+    "backend_url": "http://localhost:5000/predict",
+    "enable_backend": true,
+    "system": {
+      "cpu_count": 20,
+      "memory_total": 16.944848896
+    }
+  },
+  "feature_formats": {
+    "face": "13\u7ef4",
+    "audio": "21\u7ef4",
+    "hr": "9\u7ef4"
+  },
+  "hr_device": {
+    "enabled": true,
+    "type": "ble_heart_rate",
+    "connected": true,
+    "fallback_active": true
+  },
+  "backend": {
+    "enabled": true,
+    "url": "http://localhost:5000/predict"
+  }
+}
