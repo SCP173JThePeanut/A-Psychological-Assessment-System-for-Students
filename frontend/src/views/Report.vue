@@ -1820,19 +1820,15 @@ const handleResize = () => {
 .risk-low .risk-value { color: var(--color-accent); }
 .risk-medium .risk-value { color: var(--color-warning); }
 .risk-high .risk-value { color: var(--color-danger); }
-
 .suggestion-card {
-  border-color: var(--color-accent);
-  border-width: 2px;
-  margin-top: var(--spacing-lg);
-  /* 新增/修改以下代码以实现全宽 */
-  grid-column: 1 / -1; /* 横跨所有列 */
-  width: calc(100% + 2 * var(--spacing-lg)); /* 宽度补偿内边距 */
-  margin-left: calc(-1 * var(--spacing-lg)); /* 向左扩展以消除左留白 */
-  margin-right: calc(-1 * var(--spacing-lg)); /* 向右扩展以消除右留白 */
-  position: relative; /* 确保定位正确 */
-  z-index: 1; /* 确保在正确层级 */
-  border-radius: 0 var(--radius-lg) var(--radius-lg) 0; /* 调整圆角：左上、左下为0 */
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--color-primary) 5%, white 95%),
+    color-mix(in srgb, var(--color-primary) 8%, white 92%)
+  );
+  border: 2px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+  border-left: 6px solid var(--color-primary);
+  margin-bottom: var(--spacing-lg);
 }
 
 .suggestion-content {
@@ -1847,40 +1843,35 @@ const handleResize = () => {
   grid-template-rows: auto; /* 行数改为自动适应，可选项 */
   gap: var(--spacing-md);
 }
-
 .suggestion-item {
   display: flex;
   align-items: flex-start;
   gap: var(--spacing-md);
   padding: var(--spacing-md);
-  background: var(--color-bg-main);
+  background: rgba(131, 214, 255, 0.6);
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
   transition: all var(--transition-normal);
-  min-height: 100px;
 }
 
 .suggestion-item:hover {
-  background: var(--color-bg-hover);
-  border-color: var(--color-primary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(4px);
+   box-shadow: 0 4px 12px var(--color-shadow);
 }
 
 .suggestion-number {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  background: var(--color-primary);
-  color: white;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  font-size: 0.85rem;
-  font-weight: bold;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
   flex-shrink: 0;
-  margin-top: 2px;
-  box-shadow: 0 4px 8px rgba(42, 111, 121, 0.2);
 }
 
 .suggestion-text {
@@ -2179,29 +2170,7 @@ const handleResize = () => {
   border: 1px solid rgba(255, 167, 38, 0.3);
 }
 
-/* 个性化建议卡片样式 */
-.suggestion-card {
-  grid-column: 1 / -1;
-  background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
-  border: 2px solid #81C784;
-  border-left: 6px solid #4CAF50;
-  margin-bottom: var(--spacing-lg);
-}
 
-.suggestion-card .card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: var(--spacing-md);
-  border-bottom: 2px solid rgba(76, 175, 80, 0.3);
-  margin-bottom: var(--spacing-md);
-}
-
-.suggestion-card h3 {
-  color: #2E7D32;
-  font-size: 1.3rem;
-  margin: 0;
-}
 
 .score-badge {
   display: inline-block;
@@ -2247,7 +2216,7 @@ const handleResize = () => {
   padding: var(--spacing-md);
   background: rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-md);
-  border-left: 4px solid #4CAF50;
+  border-left: 4px solid #28c2ad;
   transition: all var(--transition-normal);
 }
 
@@ -2264,7 +2233,7 @@ const handleResize = () => {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #4CAF50, #388E3C);
+  background: linear-gradient(135deg, #2A6F79;,  #2A6F79);
   color: white;
   font-weight: 600;
   font-size: 0.95rem;
@@ -2272,7 +2241,7 @@ const handleResize = () => {
 }
 
 .suggestion-text {
-  color: #2E7D32;
+  color: #3b8b8d;
   line-height: 1.6;
   font-size: 0.95rem;
 }

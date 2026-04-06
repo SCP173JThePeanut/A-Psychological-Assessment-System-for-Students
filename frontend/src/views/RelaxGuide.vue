@@ -86,7 +86,7 @@
           <!-- 步骤1: 环境准备 -->
           <div v-if="currentStep === 1" class="step-panel">
             <div class="step-header">
-              <div class="step-icon">🌿</div>
+              <div class="step-icon">🍀</div>
               <div class="step-title">
                 <h2>创建理想的评估环境</h2>
                 <p class="step-description">请确保您处于以下理想状态，以获得最准确的评估结果</p>
@@ -159,16 +159,37 @@
             </div>
           </div>
 
-          <!-- 步骤2: 呼吸调整 -->
+          <!-- 步骤2: 呼吸调整 - 修改为两行布局 -->
           <div v-else-if="currentStep === 2" class="step-panel">
-            <div class="step-header">
-              <div class="step-icon">🌬️</div>
-              <div class="step-title">
-                <h2>深呼吸，平静心绪</h2>
-                <p class="step-description">跟随引导进行4-7-8呼吸法，帮助身心进入最佳状态</p>
+            <!-- 第一行：深呼吸描述和呼吸技巧在同一行 -->
+            <div class="breath-top-row">
+              <!-- 左侧：深呼吸描述 -->
+              <div class="breath-description-card">
+                <div class="step-header-content">
+                  <div class="step-icon">🌬️</div>
+                  <div class="step-title">
+                    <h2>深呼吸，平静心绪</h2>
+                    <p class="step-description">跟随引导进行4-7-8呼吸法，帮助身心进入最佳状态</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 右侧：呼吸技巧 -->
+              <div class="breath-tips-card">
+                <div class="tips-header">
+                  <span class="tips-icon">✨</span>
+                  <h3>呼吸技巧</h3>
+                </div>
+                <ul class="tips-list">
+                  <li>保持呼吸平缓，不要过度用力</li>
+                  <li>可以把手放在腹部感受呼吸</li>
+                  <li>闭上眼睛效果更佳</li>
+                  <li>完成4次完整循环即可继续</li>
+                </ul>
               </div>
             </div>
             
+            <!-- 第二行：呼吸动画 -->
             <div class="breath-guide-section">
               <div class="breath-visualizer">
                 <div class="breath-animation-container">
@@ -207,19 +228,6 @@
                   </div>
                 </div>
               </div>
-              
-              <div class="breath-tips-card">
-                <div class="tips-header">
-                  <span class="tips-icon">💡</span>
-                  <h3>呼吸技巧</h3>
-                </div>
-                <ul class="tips-list">
-                  <li>保持呼吸平缓，不要过度用力</li>
-                  <li>可以把手放在腹部感受呼吸</li>
-                  <li>闭上眼睛效果更佳</li>
-                  <li>完成4次完整循环即可继续</li>
-                </ul>
-              </div>
             </div>
           </div>
 
@@ -234,6 +242,64 @@
             </div>
             
             <div class="relaxation-section">
+              <!-- 顶部：音乐组件和当前放松部位 -->
+              <div class="relaxation-top">
+                <div class="audio-options">
+                  <div class="audio-header">
+                    <span class="audio-icon">🎵</span>
+                    <h3>辅助放松音效（可选）</h3>
+                  </div>
+                  <p class="audio-desc">选择一种自然音效，帮助您更快进入放松状态</p>
+                  
+                  <!-- 新增：音效选择卡片 -->
+                  <div class="audio-selection">
+                    <div v-for="audio in audioOptions" 
+                         :key="audio.id" 
+                         class="audio-card" 
+                         :class="{ selected: selectedAudio.id === audio.id }"
+                         @click="changeAudio(audio)">
+                      <div class="audio-icon">{{ audio.icon }}</div>
+                      <div class="audio-info">
+                        <h4>{{ audio.name }}</h4>
+                        <p>{{ audio.description }}</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- 修改：音频控制区域 -->
+                  <div class="audio-controls">
+                    <button class="audio-btn" @click="toggleAudio">
+                      {{ isAudioPlaying ? '⏸️ 暂停播放' : '▶️ 播放 ' + selectedAudio.name }}
+                    </button>
+                  </div>
+                  
+                  <!-- 新增：音频进度条 -->
+                  <div class="audio-progress-container">
+                    <input 
+                      type="range" 
+                      min="0" 
+                      :max="audioDuration || 0" 
+                      :value="audioCurrentTime" 
+                      @input="audioCurrentTime = $event.target.value; audioElement.currentTime = audioCurrentTime"
+                      class="audio-progress-bar">
+                    <div class="audio-time-display">
+                      <span class="current-time">{{ formatTime(audioCurrentTime) }}</span>
+                      <span class="duration">{{ formatTime(audioDuration) }}</span>
+                    </div>
+                  </div>
+                </div>
+                  
+              <div class="current-focus">
+                <div class="focus-info">
+                  <p class="focus-label">当前放松部位</p>
+                  <h3 class="focus-part">{{ activeBodyPart }}</h3>
+                  <p class="focus-instruction">{{ getBodyPartInstruction(activeBodyPart) }}</p>
+                </div>
+              </div>
+            </div>
+                                                    
+              
+              <!-- 中间：身体示意图和放松步骤 -->
               <div class="relaxation-main">
                 <div class="body-visual-area">
                   <!-- 身体示意图 -->
@@ -249,20 +315,11 @@
                       <span class="part-label">{{ getBodyPartLabel(part) }}</span>
                     </div>
                   </div>
-                  
-                  <div class="current-focus">
-                    <div class="focus-icon">🎯</div>
-                    <div class="focus-info">
-                      <p class="focus-label">当前放松部位</p>
-                      <h3 class="focus-part">{{ activeBodyPart }}</h3>
-                      <p class="focus-instruction">{{ getBodyPartInstruction(activeBodyPart) }}</p>
-                    </div>
-                  </div>
                 </div>
                 
                 <div class="relaxation-steps">
                   <div class="steps-header">
-                    <span class="steps-icon">📋</span>
+                    <!-- <span class="steps-icon">📋</span> -->
                     <h3>放松步骤</h3>
                   </div>
                   <div class="steps-list">
@@ -278,24 +335,6 @@
                       <span class="step-duration">放松5秒</span>
                       <span v-if="bodyParts.indexOf(activeBodyPart) > index" class="step-check">✓</span>
                     </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="audio-options">
-                <div class="audio-header">
-                  <span class="audio-icon">🎵</span>
-                  <h3>辅助放松音乐（可选）</h3>
-                </div>
-                <p class="audio-desc">播放自然白噪音或轻音乐，帮助您更快进入放松状态</p>
-                <div class="audio-controls">
-                  <button class="audio-btn" @click="toggleAudio">
-                    {{ isAudioPlaying ? '⏸️ 暂停音乐' : '▶️ 播放音乐' }}
-                  </button>
-                  <div class="volume-control">
-                    <span class="volume-icon">🔈</span>
-                    <input type="range" min="0" max="100" v-model="audioVolume" class="volume-slider">
-                    <span class="volume-icon">🔊</span>
                   </div>
                 </div>
               </div>
@@ -322,7 +361,7 @@
               </div>
               
               <div class="readiness-card">
-                <div class="readiness-icon">🌬️</div>
+                <!-- <div class="readiness-icon">🌬️</div> -->
                 <div class="readiness-content">
                   <h3>呼吸平稳</h3>
                   <p>已完成4轮呼吸调整</p>
@@ -330,7 +369,7 @@
               </div>
               
               <div class="readiness-card">
-                <div class="readiness-icon">🧘</div>
+                <!-- <div class="readiness-icon">🧘</div> -->
                 <div class="readiness-content">
                   <h3>身心放松</h3>
                   <p>已完成全身肌肉放松</p>
@@ -341,28 +380,26 @@
             <div class="assessment-instructions">
               <div class="instructions-grid">
                 <div class="instruction-item">
-                  <div class="item-icon">⏱️</div>
-                  <div>
+                    <div>
                     <h4>评估时长</h4>
                     <p>约5-8分钟，请确保全程专注</p>
                   </div>
                 </div>
                 <div class="instruction-item">
-                  <div class="item-icon">🎯</div>
+                 
                   <div>
                     <h4>评估方式</h4>
                     <p>结合心理量表与多模态数据分析</p>
                   </div>
                 </div>
                 <div class="instruction-item">
-                  <div class="item-icon">🤔</div>
                   <div>
                     <h4>问题类型</h4>
                     <p>情境判断与自我状态评估</p>
                   </div>
                 </div>
                 <div class="instruction-item">
-                  <div class="item-icon">🔐</div>
+                  <!-- <div class="item-icon">🔐</div> -->
                   <div>
                     <h4>数据安全</h4>
                     <p>所有数据加密存储，仅用于本次评估</p>
@@ -372,7 +409,7 @@
               
               <div class="consent-section">
                 <div class="consent-header">
-                  <span class="consent-icon">📋</span>
+                  <!-- <span class="consent-icon">📋</span> -->
                   <h3>评估须知</h3>
                 </div>
                 <div class="consent-content">
@@ -418,17 +455,20 @@
                     @click="startAssessment"
                     :disabled="!consentGiven"
                     :class="{ disabled: !consentGiven }">
-              🎯 开始正式评估
+               开始正式评估
             </button>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
+  <!-- 音频元素 -->
+  <audio ref="audioElement" loop crossorigin="anonymous"></audio>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -454,8 +494,6 @@ const breathCycle = ref(0)
 
 // 音频控制
 const activeBodyPart = ref('脚部')
-const isAudioPlaying = ref(false)
-const audioVolume = ref(50)
 const consentGiven = ref(false)
 
 // 身体部位顺序（从下到上）
@@ -496,23 +534,120 @@ const getBodyPartLabel = (part) => {
   return labels[part] || part
 }
 
-// 获取身体部位指导
+// 获取身体部位的专业放松指导
+
 const getBodyPartInstruction = (part) => {
   const instructions = {
-    '脚部': '放松脚趾，感受地面的支撑',
-    '小腿': '放松小腿肌肉，让双腿变沉',
-    '大腿': '放松大腿，想象它们变得柔软',
-    '臀部': '放松臀部，释放所有压力',
-    '腹部': '放松腹部，深呼吸感受起伏',
-    '背部': '放松背部，感受椅子的支撑',
-    '胸部': '放松胸腔，让呼吸更顺畅',
-    '手臂': '放松手臂，让它们自然下垂',
-    '肩膀': '放松肩膀，让紧张感消失',
-    '颈部': '放松颈部，轻轻转动头部',
-    '面部': '放松面部肌肉，特别是下巴和额头',
-    '头部': '放松整个头部，让思绪平静'
+    '脚部': '用力勾紧脚趾5秒 → 彻底放松',
+    '小腿': '脚尖勾起绷紧5秒 → 完全松开',
+    '大腿': '收缩前侧肌肉5秒 → 缓缓放下',
+    '臀部': '用力夹紧5秒 → 彻底释放',
+    '腹部': '收紧核心5秒 → 长叹放松',
+    '背部': '肩后收，夹背5秒 → 恢复自然',
+    '胸部': '挺胸扩张5秒 → 含胸释放',
+    '手臂': '握拳屈肘5秒 → 突然松开',
+    '肩膀': '耸肩向上5秒 → 沉肩下拉',
+    '颈部': '侧头拉伸5秒 → 缓慢回正',
+    '面部': '皱紧面部5秒 → 彻底舒展',
+    '头部': '向上牵引 → 释放紧张'
   }
-  return instructions[part] || '感受这个部位的放松...'
+  return instructions[part] || '请专注于这个部位，深呼吸，并有意识地释放所有紧张'
+}
+// 新增：音频选项
+const audioOptions = ref([
+  { id: 'wind', name: '风声', icon: '🌬️', file: '../../public/audio/forest-wind.mp3', description: '舒缓的森林风声' },
+  { id: 'wave', name: '海浪声', icon: '🌊', file: '../../public/audio/ocean-wave.mp3', description: '平静的海浪拍岸' },
+  { id: 'rain', name: '雨声', icon: '🌧️', file: '../../public/audio/rain-light.mp3', description: '轻柔的绵绵细雨' }
+])
+
+// 修改：音频控制相关状态
+const selectedAudio = ref(audioOptions.value[0]) // 默认选中第一个选项（风声）
+const isAudioPlaying = ref(false)
+const audioVolume = ref(50)
+const audioElement = ref(null) // 用于引用HTML Audio元素
+const audioCurrentTime = ref(0) // 音频当前播放时间
+const audioDuration = ref(0) // 音频总时长
+
+// 修改：切换音频
+const toggleAudio = () => {
+  if (!audioElement.value) return
+  
+  if (isAudioPlaying.value) {
+    audioElement.value.pause()
+  } else {
+    // 如果切换了音效，需要重新加载音频源
+    if (audioElement.value.src !== selectedAudio.value.file) {
+      audioElement.value.src = selectedAudio.value.file
+      audioElement.value.load()
+    }
+    audioElement.value.play().catch(e => console.log("音频播放失败:", e))
+  }
+  isAudioPlaying.value = !isAudioPlaying.value
+}
+
+// 格式化时间
+const formatTime = (seconds) => {
+  if (!seconds || isNaN(seconds)) return '0:00'
+  const mins = Math.floor(seconds / 60)
+  const secs = Math.floor(seconds % 60)
+  return `${mins}:${secs < 10 ? '0' : ''}${secs}`
+}
+
+// 新增：切换选择的音效
+const changeAudio = (audio) => {
+  if (selectedAudio.value.id === audio.id) return // 如果选择的是当前正在播放的，则不操作
+  
+  const wasPlaying = isAudioPlaying.value
+  if (wasPlaying) {
+    // 如果之前正在播放，先暂停当前音频
+    audioElement.value.pause()
+    isAudioPlaying.value = false
+  }
+  
+  // 切换到新的音频
+  selectedAudio.value = audio
+  audioElement.value.src = audio.file
+  audioElement.value.load()
+  audioElement.value.volume = audioVolume.value / 100
+  
+  // 重置时间
+  audioCurrentTime.value = 0
+  audioDuration.value = 0
+  
+  if (wasPlaying) {
+    // 如果之前是播放状态，则播放新选择的音频
+    audioElement.value.play().catch(e => console.log("音频播放失败:", e))
+    isAudioPlaying.value = true
+  }
+}
+
+// 新增：音频事件监听设置
+const setupAudioListeners = () => {
+  if (!audioElement.value) return
+  
+  // 监听时间更新
+  audioElement.value.addEventListener('timeupdate', () => {
+    audioCurrentTime.value = audioElement.value.currentTime
+  })
+  
+  // 监听音频元数据加载
+  audioElement.value.addEventListener('loadedmetadata', () => {
+    audioDuration.value = audioElement.value.duration
+  })
+  
+  // 监听播放结束
+  audioElement.value.addEventListener('ended', () => {
+    isAudioPlaying.value = false
+  })
+  
+  // 监听播放/暂停
+  audioElement.value.addEventListener('play', () => {
+    isAudioPlaying.value = true
+  })
+  
+  audioElement.value.addEventListener('pause', () => {
+    isAudioPlaying.value = false
+  })
 }
 
 // 呼吸动画逻辑
@@ -573,12 +708,6 @@ const initBodyRelaxation = () => {
   }, 3000) // 每个部位3秒
 }
 
-// 切换音频
-const toggleAudio = () => {
-  isAudioPlaying.value = !isAudioPlaying.value
-  // 这里可以集成实际的音频播放逻辑
-}
-
 // 下一步
 const nextStep = () => {
   if (currentStep.value < 4) {
@@ -630,19 +759,43 @@ const startAssessment = () => {
   if (breathInterval) clearInterval(breathInterval)
   if (bodyRelaxInterval) clearInterval(bodyRelaxInterval)
   
+  // 停止音频播放
+  if (audioElement.value) {
+    audioElement.value.pause()
+  }
+  
   // 跳转到测试页面
   router.push('/test')
 }
 
 // 组件挂载
 onMounted(() => {
-  // 可以在这里初始化其他功能
+  // 设置音频事件监听
+  setupAudioListeners()
+  
+  // 初始化音频源
+  if (audioElement.value) {
+    audioElement.value.src = selectedAudio.value.file
+    audioElement.value.volume = audioVolume.value / 100
+  }
 })
 
 // 组件卸载
 onUnmounted(() => {
   if (breathInterval) clearInterval(breathInterval)
   if (bodyRelaxInterval) clearInterval(bodyRelaxInterval)
+  
+  if (audioElement.value) {
+    audioElement.value.pause()
+    audioElement.value = null
+  }
+})
+
+// 监听音量变化
+watch(audioVolume, (newVolume) => {
+  if (audioElement.value) {
+    audioElement.value.volume = newVolume / 100
+  }
 })
 </script>
 
@@ -945,7 +1098,7 @@ onUnmounted(() => {
   max-height: calc(100vh - 180px);
 }
 
-/* 步骤头部 */
+/* 步骤头部（步骤1、3、4使用） */
 .step-header {
   display: flex;
   align-items: center;
@@ -1106,21 +1259,132 @@ onUnmounted(() => {
   margin-top: 0.5rem;
 }
 
-/* 步骤2: 呼吸调整 */
+/* 步骤2: 呼吸调整 - 新的两行布局 */
+
+/* 第一行：深呼吸描述和呼吸技巧在同一行 */
+.breath-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* 确保两个组件高度一致 */
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* 左侧：深呼吸描述卡片 */
+.breath-description-card {
+  flex: 1;
+  min-width: 300px;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(248, 252, 251, 0.9), rgba(232, 244, 243, 0.9));
+  border-radius: 18px;
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(78, 205, 196, 0.1);
+  transition: all 0.3s ease;
+  min-height: 140px; /* 设置最小高度确保与右侧对齐 */
+}
+
+.breath-description-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(78, 205, 196, 0.15);
+}
+
+.step-header-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* 右侧：呼吸技巧卡片 */
+.breath-tips-card {
+  flex: 0 0 320px;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(248, 252, 251, 0.95), rgba(232, 244, 243, 0.95));
+  border-radius: 18px;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  box-shadow: 0 4px 20px rgba(78, 205, 196, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 140px; /* 设置最小高度确保与左侧对齐 */
+}
+
+.breath-tips-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(78, 205, 196, 0.15);
+}
+
+.tips-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.tips-icon {
+  font-size: 1.5rem;
+  color: #2A6F79;
+}
+
+.breath-tips-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2A6F79;
+  margin: 0;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tips-list li {
+  color: #546E7A;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.tips-list li:hover {
+  color: #2A6F79;
+  transform: translateX(4px);
+}
+
+.tips-list li:before {
+  content: "•";
+  color: #4ECDC4;
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+/* 第二行：呼吸动画 */
 .breath-guide-section {
-  max-width: 1000px;
-  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(248, 252, 251, 0.9), rgba(232, 244, 243, 0.9));
+  border-radius: 24px;
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  box-shadow: 0 4px 20px rgba(78, 205, 196, 0.1);
+  margin-top: 1rem;
 }
 
 .breath-visualizer {
   display: flex;
   align-items: center;
   gap: 3rem;
-  margin-bottom: 2.5rem;
-  padding: 2rem;
-  background: linear-gradient(135deg, rgba(248, 252, 251, 0.9), rgba(232, 244, 243, 0.9));
-  border-radius: 24px;
-  border: 1px solid rgba(78, 205, 196, 0.2);
+  width: 100%;
 }
 
 .breath-animation-container {
@@ -1235,66 +1499,20 @@ onUnmounted(() => {
   line-height: 1.5;
 }
 
-.breath-tips-card {
-  background: linear-gradient(135deg, rgba(248, 252, 251, 0.95), rgba(232, 244, 243, 0.95));
-  border-radius: 18px;
-  border: 1px solid rgba(78, 205, 196, 0.3);
-  padding: 1.5rem 2rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.tips-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.25rem;
-}
-
-.tips-icon {
-  font-size: 1.5rem;
-  color: #2A6F79;
-}
-
-.breath-tips-card h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #2A6F79;
-}
-
-.tips-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
-}
-
-.tips-list li {
-  color: #546E7A;
-  padding-left: 1.5rem;
-  position: relative;
-  line-height: 1.6;
-}
-
-.tips-list li:before {
-  content: "•";
-  color: #4ECDC4;
-  position: absolute;
-  left: 0;
-  font-size: 1.5rem;
-}
-
 /* 步骤3: 身心放松 */
 .relaxation-section {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.relaxation-main {
-  display: flex;
-  gap: 3rem;
-  margin-bottom: 2.5rem;
+/* 新增：放松部分顶部容器 */
+.relaxation-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   padding: 2rem;
   background: linear-gradient(135deg, rgba(248, 252, 251, 0.9), rgba(232, 244, 243, 0.9));
   border-radius: 24px;
@@ -1357,17 +1575,6 @@ onUnmounted(() => {
   border-color: rgba(78, 205, 196, 0.3);
 }
 
-.current-focus {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem 2rem;
-  background: linear-gradient(135deg, rgba(248, 252, 251, 0.95), rgba(232, 244, 243, 0.95));
-  border-radius: 18px;
-  border: 1px solid rgba(78, 205, 196, 0.3);
-  min-width: 350px;
-}
-
 .focus-icon {
   font-size: 2.5rem;
   animation: gentlePulse 2s ease-in-out infinite;
@@ -1384,36 +1591,70 @@ onUnmounted(() => {
   }
 }
 
+.focus-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 子元素水平居中 */
+  justify-content: center; /* 子元素垂直居中 */
+  width: 100%; /* 确保宽度充满容器 */
+}
+
 .focus-label {
-  font-size: 0.95rem;
+  font-size: 1.1rem; /* 从0.95rem增大到1.1rem */
   color: #546E7A;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem; /* 增大间距 */
   font-weight: 500;
+  text-align: center; /* 确保文字居中 */
+  width: 100%; /* 确保宽度充满容器 */
 }
 
 .focus-part {
-  font-size: 1.6rem;
+  font-size: 2rem; /* 从1.6rem增大到2rem */
   font-weight: 700;
   color: #2A6F79;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem; /* 增大间距 */
+  text-align: center; /* 确保文字居中 */
+  width: 100%; /* 确保宽度充满容器 */
 }
 
 .focus-instruction {
-  font-size: 0.95rem;
+  font-size: 1.2rem; /* 从0.95rem增大到1.2rem */
   color: #546E7A;
-  line-height: 1.5;
+  line-height: 1.6; /* 增大行高 */
+  text-align: center; /* 确保文字居中 */
+  width: 100%; /* 确保宽度充满容器 */
+  max-width: 300px; /* 限制最大宽度，避免过宽 */
+  margin: 0 auto; /* 水平居中 */
+}
+
+
+.current-focus {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 添加水平居中 */
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 18px;
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  min-width: auto;
+  text-align: center; /* 添加文字居中 */
+  width: 100%; /* 确保宽度充满容器 */
+}
+
+/* 修改：放松主体区域 */
+.relaxation-main {
+  display: flex;
+  gap: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(248, 252, 251, 0.9), rgba(232, 244, 243, 0.9));
+  border-radius: 24px;
+  border: 1px solid rgba(78, 205, 196, 0.2);
 }
 
 .relaxation-steps {
   flex: 1;
   min-width: 300px;
-}
-
-.steps-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
 }
 
 .steps-icon {
@@ -1524,13 +1765,14 @@ onUnmounted(() => {
   opacity: 1;
 }
 
+/* 步骤3音频选项 */
 .audio-options {
-  background: linear-gradient(135deg, rgba(248, 252, 251, 0.95), rgba(232, 244, 243, 0.95));
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 18px;
-  border: 1px solid rgba(78, 205, 196, 0.3);
+  border: 1px solid rgba(78, 205, 196, 0.2);
   padding: 1.5rem 2rem;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
 .audio-header {
@@ -1557,11 +1799,65 @@ onUnmounted(() => {
   line-height: 1.6;
 }
 
+/* 新增：音效选择卡片样式 */
+.audio-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.audio-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(78, 205, 196, 0.1);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  gap: 0.8rem;
+}
+
+.audio-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(78, 205, 196, 0.3);
+  box-shadow: 0 8px 20px rgba(78, 205, 196, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.audio-card.selected {
+  background: linear-gradient(135deg, rgba(232, 248, 245, 0.95), rgba(210, 240, 237, 0.95));
+  border-color: #4ECDC4;
+  box-shadow: 0 8px 20px rgba(78, 205, 196, 0.15);
+}
+
+.audio-card .audio-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.audio-info h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #2A6F79;
+}
+
+.audio-info p {
+  font-size: 0.85rem;
+  color: #546E7A;
+  line-height: 1.4;
+}
+
 .audio-controls {
   display: flex;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  margin-bottom: 1.5rem;
 }
 
 .audio-btn {
@@ -1610,6 +1906,71 @@ onUnmounted(() => {
   cursor: pointer;
   border: 3px solid white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 新增：音频进度条样式 */
+.audio-progress-container {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.audio-progress-bar {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(232, 244, 243, 0.8);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.audio-progress-bar:hover {
+  height: 8px;
+  background: rgba(78, 205, 196, 0.3);
+}
+
+.audio-progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #4ECDC4;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(78, 205, 196, 0.3);
+}
+
+.audio-progress-bar::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #4ECDC4;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(78, 205, 196, 0.3);
+}
+
+.audio-time-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #78909C;
+  padding: 0 0.25rem;
+}
+
+.current-time {
+  font-weight: 500;
+  color: #4ECDC4;
+}
+
+.duration {
+  font-size: 0.8rem;
 }
 
 /* 步骤4: 准备就绪 */
@@ -1704,7 +2065,6 @@ onUnmounted(() => {
   color: #546E7A;
   line-height: 1.5;
 }
-
 .consent-section {
   background: linear-gradient(135deg, rgba(255, 253, 231, 0.9), rgba(255, 250, 204, 0.9));
   border-radius: 18px;
@@ -1908,9 +2268,22 @@ onUnmounted(() => {
     flex-direction: column;
   }
   
+  .relaxation-top {
+    grid-template-columns: 1fr;
+  }
+  
   .current-focus {
     min-width: auto;
     width: 100%;
+  }
+  
+  /* 步骤2头部布局在中等屏幕 */
+  .breath-top-row {
+    gap: 1.5rem;
+  }
+  
+  .breath-tips-card {
+    flex: 0 0 280px;
   }
 }
 
@@ -1957,6 +2330,10 @@ onUnmounted(() => {
     grid-template-columns: 1fr;
   }
   
+  .audio-selection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
   .navigation-bar {
     flex-direction: column;
     gap: 1rem;
@@ -1967,6 +2344,34 @@ onUnmounted(() => {
   .nav-right {
     width: 100%;
     justify-content: center;
+  }
+  
+  /* 步骤2头部布局在平板端 */
+  .breath-top-row {
+    flex-direction: column;
+  }
+  
+  .breath-description-card,
+  .breath-tips-card {
+    width: 100%;
+    flex: none;
+  }
+  
+  .breath-description-card {
+    min-height: auto;
+  }
+  
+  .breath-tips-card {
+    min-height: auto;
+  }
+  
+  .breath-visualizer {
+    flex-direction: column;
+  }
+  
+  .breath-animation-container {
+    width: 220px;
+    height: 220px;
   }
 }
 
@@ -1992,8 +2397,348 @@ onUnmounted(() => {
     padding: 0.8rem 1.5rem;
   }
   
-  .tips-list {
+  /* 在768px以下，音频选择卡片改为单列 */
+  .audio-selection {
     grid-template-columns: 1fr;
+  }
+  
+  .breath-guide-section {
+    padding: 1.5rem;
+  }
+  
+  .breath-animation-container {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .relaxation-main {
+    padding: 1.5rem;
+  }
+  
+  .body-silhouette {
+    width: 250px;
+    height: 400px;
+  }
+  
+   .current-focus {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.25rem; /* 调整内边距 */
+  }
+  
+  .focus-info {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .focus-label {
+    font-size: 1rem; /* 在移动端保持合适大小 */
+  }
+  
+  .focus-part {
+    font-size: 1.8rem; /* 在移动端保持合适大小 */
+  }
+  
+  .focus-instruction {
+    font-size: 1.1rem; /* 在移动端保持合适大小 */
+  }
+
+  .steps-list {
+    max-height: 300px;
+  }
+  
+  /* 步骤4的响应式调整 */
+  .readiness-overview {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .instructions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .instruction-item {
+    padding: 1rem;
+  }
+  
+  .item-icon {
+    font-size: 1.5rem;
+  }
+  
+  .instruction-item h4 {
+    font-size: 1rem;
+  }
+  
+  .consent-section {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .consent-agreement {
+    padding: 0.8rem;
+  }
+  
+  .consent-agreement span {
+    font-size: 0.9rem;
+  }
+  
+  /* 步骤2头部布局在手机端 */
+  .breath-description-card {
+    padding: 1.25rem 1.5rem;
+    min-height: 120px;
+  }
+  
+  .breath-tips-card {
+    padding: 1.25rem 1.5rem;
+    min-height: 120px;
+  }
+  
+  .step-header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .step-icon {
+    font-size: 2.5rem;
+  }
+  
+  .step-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .step-description {
+    font-size: 1rem;
+  }
+  
+  .tips-header {
+    justify-content: center;
+  }
+  
+  .instruction-card {
+    padding: 1rem;
+  }
+  
+  .instruction-number {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 1.1rem;
+  }
+  
+  .instruction-content h4 {
+    font-size: 1.1rem;
+  }
+  
+  .instruction-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 1rem;
+  }
+  
+  .nav-panel {
+    padding: 1.5rem;
+  }
+  
+  .step-content-area {
+    padding: 1.25rem;
+  }
+  
+  .step-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .step-title h2 {
+    font-size: 1.6rem;
+  }
+  
+  .step-description {
+    font-size: 1rem;
+  }
+  
+  .env-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .env-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .env-icon {
+    font-size: 2rem;
+  }
+  
+  .env-title {
+    font-size: 1.1rem;
+  }
+  
+  .env-desc {
+    font-size: 0.9rem;
+  }
+  
+  .check-status {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .breath-animation-container {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .breath-phase {
+    font-size: 1.1rem;
+  }
+  
+  .breath-timer {
+    font-size: 2rem;
+  }
+  
+  .breath-cycle {
+    font-size: 0.9rem;
+  }
+  
+  .instruction-card {
+    padding: 0.8rem;
+  }
+  
+  .instruction-number {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    font-size: 1rem;
+  }
+  
+  .instruction-content h4 {
+    font-size: 1rem;
+  }
+  
+  .instruction-content p {
+    font-size: 0.85rem;
+  }
+  
+  .body-silhouette {
+    width: 200px;
+    height: 350px;
+  }
+  
+  .body-part {
+    width: 70px;
+    height: 25px;
+    font-size: 0.75rem;
+  }
+  
+  .body-part.active {
+    width: 85px;
+    height: 35px;
+  }
+  
+  .current-focus {
+    padding: 1.25rem;
+  }
+  
+  .focus-icon {
+    font-size: 1.8rem;
+  }
+  
+  .focus-part {
+    font-size: 1.2rem;
+  }
+  
+  .step-item {
+    padding: 0.8rem 1rem;
+  }
+  
+  .step-index {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    font-size: 0.8rem;
+  }
+  
+  .step-name {
+    font-size: 0.9rem;
+  }
+  
+  .step-duration {
+    font-size: 0.8rem;
+  }
+  
+  .audio-card {
+    padding: 1rem 0.8rem;
+  }
+  
+  .audio-card .audio-icon {
+    font-size: 2rem;
+  }
+  
+  .audio-info h4 {
+    font-size: 1rem;
+  }
+  
+  .audio-info p {
+    font-size: 0.8rem;
+  }
+  
+  .audio-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.7rem 1.5rem;
+  }
+  
+  .nav-btn {
+    min-width: 120px;
+    padding: 0.7rem 1.25rem;
+  }
+  
+  .nav-btn.start-btn {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+  
+  .step-progress {
+    padding: 0.6rem 1.25rem;
+  }
+  
+  .current-step {
+    font-size: 1.1rem;
+  }
+  
+  /* 步骤2头部布局在小手机端 */
+  .breath-top-row {
+    gap: 1.5rem;
+  }
+  
+  .breath-description-card,
+  .breath-tips-card {
+    min-height: auto;
+  }
+  
+  .breath-tips-card {
+    padding: 1.25rem;
+  }
+  
+  .tips-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .tips-list {
+    gap: 0.3rem;
+  }
+  
+  .tips-list li {
+    font-size: 0.9rem;
+    padding-left: 1.25rem;
   }
 }
 </style>

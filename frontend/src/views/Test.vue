@@ -76,15 +76,15 @@
               
               <div class="question-guidance">
                 <div class="guidance-item">
-                  <span class="guidance-icon">💡</span>
+                  <!-- <span class="guidance-icon">💡</span> -->
                   <span class="guidance-text">请分享您真实的感受和经历</span>
                 </div>
                 <div class="guidance-item">
-                  <span class="guidance-icon">🗣️</span>
+                  <!-- <span class="guidance-icon">🗣️</span> -->
                   <span class="guidance-text">自然地表达，就像与朋友聊天一样</span>
                 </div>
                 <div class="guidance-item">
-                  <span class="guidance-icon">⏱️</span>
+                  <!-- <span class="guidance-icon">⏱️</span> -->
                   <span class="guidance-text">建议时长 30-60 秒</span>
                 </div>
               </div>
@@ -142,7 +142,7 @@
                   current: currentQuestion === index,
                   answered: question.answered
                 }"
-                @click="navigateToQuestion(index)"
+                @click="navigateToQuestion(index+1)"
               >
                 <div class="nav-indicator">
                   <span v-if="question.answered">✓</span>
@@ -237,14 +237,14 @@
             <div class="capture-info">
               <div class="info-grid">
                 <div class="info-item">
-                  <span class="info-icon">⏱️</span>
+                  <!-- <span class="info-icon">⏱️</span> -->
                   <div class="info-content">
                     <span class="info-label">采集时长</span>
                     <span class="info-value">{{ captureDuration }}秒</span>
                   </div>
                 </div>
                 <div class="info-item">
-                  <span class="info-icon">📈</span>
+                  <!-- <span class="info-icon">📈</span> -->
                   <div class="info-content">
                     <span class="info-label">数据质量</span>
                     <span class="info-value" :class="{ good: dataQuality > 80 }">
@@ -253,7 +253,7 @@
                   </div>
                 </div>
                 <div class="info-item">
-                  <span class="info-icon">🔍</span>
+                  <!-- <span class="info-icon">🔍</span> -->
                   <div class="info-content">
                     <span class="info-label">面部检测</span>
                     <span class="info-value" :class="{ active: isFaceDetected }">
@@ -303,7 +303,7 @@
             <!-- 生理指标 -->
             <div class="physiological-metrics">
               <div class="metric-card">
-                <div class="metric-icon">💓</div>
+                <!-- <div class="metric-icon">💓</div> -->
                 <div class="metric-info">
                   <h5>平均心率</h5>
                   <p class="metric-value">{{ avgHeartRate }} BPM</p>
@@ -311,7 +311,7 @@
               </div>
               
               <div class="metric-card">
-                <div class="metric-icon">📈</div>
+                <!-- <div class="metric-icon">📈</div> -->
                 <div class="metric-info">
                   <h5>心率变异性</h5>
                   <p class="metric-value">{{ hrv }} ms</p>
@@ -319,7 +319,7 @@
               </div>
               
               <div class="metric-card">
-                <div class="metric-icon">⚡</div>
+                <!-- <div class="metric-icon">⚡</div> -->
                 <div class="metric-info">
                   <h5>压力指数</h5>
                   <p class="metric-value">{{ stressIndex }}</p>
@@ -342,15 +342,15 @@
               
               <div class="completeness-indicators">
                 <div class="indicator" :class="{ active: isRecording }">
-                  <span class="indicator-icon">🎤</span>
+                  <!-- <span class="indicator-icon">🎤</span> -->
                   <span>语音</span>
                 </div>
                 <div class="indicator" :class="{ active: isCameraActive }">
-                  <span class="indicator-icon">📷</span>
+                  <!-- <span class="indicator-icon">📷</span> -->
                   <span>面部</span>
                 </div>
                 <div class="indicator" :class="{ active: isHRMonitoring }">
-                  <span class="indicator-icon">💓</span>
+                  <!-- <span class="indicator-icon">💓</span> -->
                   <span>生理</span>
                 </div>
               </div>
@@ -477,7 +477,7 @@ export default {
     const router = useRouter()
     
     // 调试模式
-    const showDebugPanel = ref(true)
+    const showDebugPanel = ref(false)
     
     // 测试状态
     const currentQuestion = ref(0)
@@ -1373,13 +1373,15 @@ export default {
     
     // 问题导航
     const navigateToQuestion = (index) => {
-      if (index < 0 || index >= questions.value.length) return
+      const arrayIndex = index - 1
+      console.log('导航调试: 请求跳转至索引', index, '对应问题文本:', questions.value[arrayIndex]?.text)
+      if (arrayIndex < 0 ||  arrayIndex >= questions.value.length) return
       if (isRecording.value) {
         alert('请先停止当前录音')
         return
       }
       
-      currentQuestion.value = index
+      currentQuestion.value = arrayIndex
       recordingDuration.value = 0
       audioWave.value = Array(40).fill(20)
     }
